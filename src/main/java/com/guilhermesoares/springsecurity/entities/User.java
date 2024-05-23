@@ -20,26 +20,26 @@ public class User implements Serializable, UserDetails{
 	private static final long serialVersionUID = 1L;
 	
 	@Id
-	@GeneratedValue(strategy = GenerationType.UUID)
-	private String id;
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
 	private String login;
 	private String password;
 	
 	public User() {
 	}
 
-	public User(String id, String login, String password) {
+	public User(Long id, String login, String password) {
 		super();
 		this.id = id;
 		this.login = login;
 		this.password = password;
 	}
 
-	public String getId() {
+	public Long getId() {
 		return id;
 	}
 
-	public void setId(String id) {
+	public void setId(Long id) {
 		this.id = id;
 	}
 
